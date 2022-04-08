@@ -41,8 +41,12 @@ jobs:
 
     - name: Prepare build
       run: |
+        echo "${{ secrets.SIGNKEY }}" | base64 -d > ./app/key.jks
+
+    - name: Build dependencies
+      run: |
         ./gradlew :app:dependencies --configuration genericReleaseRuntimeClasspath < /dev/null
 
-    - name: Build with Gradle
-      run: ./gradlew build
+    - name: Build main application
+      run: ./gradlew build release
 
