@@ -48,5 +48,5 @@ jobs:
         ./gradlew :app:dependencies --configuration genericReleaseRuntimeClasspath < /dev/null
 
     - name: Build main application
-      run: ./gradlew build release
+      run: ./gradlew build
 
