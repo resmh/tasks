@@ -32,8 +32,14 @@ jobs:
         cache: gradle
     
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      
+      run: |
+        - chmod +x gradlew
+        - chmod +x update_dependency_diff
+
+    - name: Prepare build
+      run: |
+        - ./update_dependency_diff
+
     - name: Build with Gradle
       run: ./gradlew build
 
