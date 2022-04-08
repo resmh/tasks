@@ -120,7 +120,7 @@ android {
             val tasks_google_key: String? by project
             resValue("string", "mapbox_key", tasks_mapbox_key ?: "")
             resValue("string", "google_key", tasks_google_key ?: "")
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard.pro")
             signingConfig = signingConfigs.getByName("release")
         }
