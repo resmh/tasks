@@ -78,10 +78,10 @@ android {
             val tasksStorePassword: String? by project
             val tasksKeyPassword: String? by project
 
-            keyAlias = 'resmh-tasks'
+            keyAlias = "resmh-tasks"
             storeFile = file("key.jks")
-            storePassword = '12345678'
-            keyPassword = '12345678'
+            storePassword = "12345678"
+            keyPassword = "12345678"
         }
     }
 
